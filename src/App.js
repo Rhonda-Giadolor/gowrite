@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import WelcomeScreen from './screens/WelcomeScreen';
+import NameScreen from './screens/NameScreen';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+const Stack = createStackNavigator();
+
+
+export default function App() {
+ return (
+   <NavigationContainer>
+     <Stack.Navigator initialRouteName="Welcome">
+       <Stack.Screen name="Welcome" component={WelcomeScreen} />
+       <Stack.Screen name="Name" component={NameScreen} />
+     </Stack.Navigator>
+   </NavigationContainer>
+ );
+};
+
