@@ -17,8 +17,8 @@ export default function WelcomeScreen() {
            </View>
 
            <View style = {styles.buttonContainer}>
-               <CustomButton title="Create a free account" type = 'primary' onPress= {() => navigation.navigate('Name')} />
-               <CustomButton title="Login" type = {ButtonType.SECONDARY}/>
+               <CustomButton title="First Time!" type = 'primary' onPress= {() => navigation.navigate('Name')} />
+               <CustomButton title="Journal" type = {ButtonType.SECONDARY} onPress= {() => navigation.navigate('Journal')}/>
            </View>
         </SafeAreaView>
     );

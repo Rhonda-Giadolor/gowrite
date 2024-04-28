@@ -15,16 +15,13 @@ export default function NameScreen({ navigation }) {
       </View>
       
       <View style = {styles.buttonContainer}>
-          <CustomButton title="Next" type = 'primary' onPress= {() => navigation.navigate("DOB")}  />
+          <CustomButton title="Next" type = 'primary' onPress= {() => navigation.navigate("ProfilePicture", {name: name})}  />
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  title: {
-
-  },
   input:{
     height: 66,
     fontsize: 20, 
